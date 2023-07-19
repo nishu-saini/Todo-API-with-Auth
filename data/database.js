@@ -5,6 +5,6 @@ export default function connectDB() {
     .connect(process.env.MONGO_URI, {
       dbName: "Todos",
     })
-    .then(() => console.log(`Database Conneted`))
+    .then((c) => console.log(`Database Conneted ${c.connection.host}`))
     .catch((err) => console.log(err));
 }
