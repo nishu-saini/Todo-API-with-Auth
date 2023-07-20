@@ -42,12 +42,12 @@
     Required: { title, description }
 
     Update task: /api/v1/task/id
-    Reaquired: replace `id` to task id in params
+    Reaquired: replace `id` to task._id inside url `params`
 
 #### DELETE Method
 
     Delete Task: /api/v1/task/id
-    Reaquired: replace `id` to task id in params
+    Reaquired: replace `id` to task._id inside url `params`
 
 ## .env file info
 
