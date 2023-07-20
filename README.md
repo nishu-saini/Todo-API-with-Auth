@@ -6,6 +6,8 @@
 
 > Once authenticated, users can create, read, update, and delete tasks using the `Task API`.
 
+### **Host URL**: [https://todo-api-with-auth.onrender.com](https://todo-api-with-auth.onrender.com)
+
 ## **Routes**
 
 ### **User API**

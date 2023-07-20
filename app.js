@@ -27,6 +27,15 @@ app.use(
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/task", taskRouter);
 
+// Home Route..
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: `Great! Now go to the following URL to know about Routes of Todo APP`,
+    URL: `https://github.com/nishu-saini/Todo-API-with-Auth`,
+  });
+});
+
 // Using Error Middleware
 app.use(errorMiddleware);
 

@@ -73,3 +73,24 @@ export const logout = (req, res) => {
       message: "Logout Successfully!",
     });
 };
+
+export const deleteUser = async (req, res, next) => {
+  try {
+    const userId = req.user;
+
+    const user = await Users.findById(userId);
+    user.deleteOne();
+
+    res
+      .status(200)
+      .cookie("token", "", {
+        expires: new Date(Date.now()),
+      })
+      .json({
+        success: true,
+        message: "User Deleted Successfully!",
+      });
+  } catch (error) {
+    next(error);
+  }
+};
