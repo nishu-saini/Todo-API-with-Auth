@@ -1,38 +1,66 @@
-# USER API
+# Backend Todo API
 
-> Developed a Node.js and Express-based backend for the USER API, utilizing a MongoDB database.
+> This is a Backend API for Todo App, with user Authentication functionality. Users are able to perform CRUD operations using the Task API. The API was built using `Node.js`, `Express`, and `MongoDB`.
 
-> This User API is designed to perform CRUD (Create, Read, Update, Delete) operations for managing users.
+> This API provides the necessary endpoints for user authentication and task management. Users can register, log in, and delete their accounts using the `User API`.
 
-> It allows for creating new user entries in the database, retrieving information for all users, deleting existing users, and updating user details as needed.
+> Once authenticated, users can create, read, update, and delete tasks using the `Task API`.
 
-> To create a new user using the User API, the user is required to provide three pieces of information: name, email, and password.
+## **Routes**
 
-## Routes:
+### **User API**
 
-### GET:
+#### GET Method
 
-    1. /api/v1/user/all -> Get All users
-    2. /api/v1/user/:id -> Get User By id
+    Get profile details: /api/v1/user/me
 
-### POST:
+    Logout user: /api/v1/user/logout
 
-    1. /api/v1/user/new -> Create New User
+#### POST Method
 
-### PUT
+    Register user: /api/v1/user/new
+    Required: { name, email, password }
 
-    1. /api/v1/user/:id -> Update User Info
+    Login user: /api/v1/user/login
+    Required: { email, password }
 
-### DELETE
+#### DELETE Method
 
-    1. /api/v1/user/:id -> DELETE USER
+    Delete account: /api/v1/user/delete
 
-## Config.env
+### **Task API**
 
-- Create a config.env file at given path.
-- Path: `/data/config.env`
-- Define following variable inside config.env
-  ```
-  PORT = 5555
-  Mongodb_URI = mongodb://localhost:27017
-  ```
+#### GET Method
+
+    Get my tasks: /api/v1/task/mytasks
+
+#### POST Method
+
+    Create new Task: /api/v1/task/new
+    Required: { title, description }
+
+    Update task: /api/v1/task/id
+    Reaquired: replace `id` to task id in params
+
+#### DELETE Method
+
+    Delete Task: /api/v1/task/id
+    Reaquired: replace `id` to task id in params
+
+## .env file info
+
+- config.env file path: `/data/confin.env`
+- variable in .env file:
+
+```
+PORT =
+
+MONGO_URI = <Mongodb database path>
+
+JWT_SECRET =
+
+NODE_ENV = Development
+
+FRONTEND_URL =
+
+```
