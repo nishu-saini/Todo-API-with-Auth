@@ -14,40 +14,45 @@
 
 #### GET Method
 
-    Get profile details: /api/v1/user/me
+- Get profile details: `/api/v1/user/me`
 
-    Logout user: /api/v1/user/logout
+- Logout user: `/api/v1/user/logout`
 
 #### POST Method
 
-    Register user: /api/v1/user/new
-    Required: { name, email, password }
+- Register user: `/api/v1/user/new`
 
-    Login user: /api/v1/user/login
-    Required: { email, password }
+  Required: { name, email, password }
+
+- Login user: `/api/v1/user/login`
+
+  Required: { email, password }
 
 #### DELETE Method
 
-    Delete account: /api/v1/user/delete
+- Delete account: `/api/v1/user/delete`
 
 ### **Task API**
 
 #### GET Method
 
-    Get my tasks: /api/v1/task/mytasks
+- Get my tasks: `/api/v1/task/mytasks`
 
 #### POST Method
 
-    Create new Task: /api/v1/task/new
-    Required: { title, description }
+- Create new Task: `/api/v1/task/new`
 
-    Update task: /api/v1/task/id
-    Reaquired: replace `id` to task._id inside url `params`
+  Required: { title, description }
+
+- Update task: `/api/v1/task/id`
+
+  Reaquired: replace `id` to `task._id` inside url `params`
 
 #### DELETE Method
 
-    Delete Task: /api/v1/task/id
-    Reaquired: replace `id` to task._id inside url `params`
+- Delete Task: `/api/v1/task/id`
+
+  Reaquired: replace `id` to `task._id` inside url `params`
 
 ## .env file info
 
